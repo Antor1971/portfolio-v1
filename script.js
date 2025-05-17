@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Typing Animation
-    const text = `Hi, I'm M. Aliul Siddique Antor, a final-year undergraduate student pursuing a BSc in Computer Science and Engineering at BRAC University, Bangladesh.
+    const text = `Hi, I'm M. Aliul Siddique Antor, a final-year undergraduate student pursuing a BSc in Computer Science and Engineering at BRAC University in Bangladesh.
 
 I'm passionate about technology and have a strong foundation in full-stack web development, particularly with the MERN stack (MongoDB, Express.js, React, Node.js). I'm eager to work on MERN-based projects and continue growing as a developer.
 
