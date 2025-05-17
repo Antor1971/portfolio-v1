@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Antor's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="all-projects" class="with-background">
+        <div class="background-overlay"></div>
+        <h2>All Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/project1.jpg" alt="Project 1" class="project-image">
+                <div class="project-content">
+                    <h3>Project 1</h3>
+                    <p>Project description goes here</p>
+                </div>
+                <a href="https://github.com/yourusername/project1" class="github-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="project-card">
+                <img src="images/project2.jpg" alt="Project 2" class="project-image">
+                <div class="project-content">
+                    <h3>Project 2</h3>
+                    <p>Project description goes here</p>
+                </div>
+                <a href="https://github.com/yourusername/project2" class="github-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- to add more project -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 M. Aliul Siddique Antor. All rights reserved.</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title"></h3>
+            <div class="modal-image-container">
+                <img class="modal-image" src="" alt="Project Image">
+            </div>
+            <p class="modal-description"></p>
+            <a class="modal-github-link" href="" target="_blank">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+</html>
