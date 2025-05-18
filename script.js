@@ -37,14 +37,32 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            const name = form.querySelector('input[type="text"]').value;
-            const email = form.querySelector('input[type="email"]').value;
-            const message = form.querySelector('textarea').value;
-            
-            const mailtoLink = `mailto:moliulsiddique@gmail.com?subject=Portfolio Contact from ${name}&body=From: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-            
-            window.location.href = mailtoLink;
-            form.reset();
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            // Replace these with your actual EmailJS service and template IDs
+            const templateParams = {
+                to_email: 'moliulsiddique@gmail.com',
+                user_name: form.querySelector('[name="user_name"]').value,
+                user_email: form.querySelector('[name="user_email"]').value,
+                message: form.querySelector('[name="message"]').value
+            };
+
+            emailjs.send('service_xucaiij', 'template_psjdc4k', templateParams)
+                .then(() => {
+                    alert('Message sent successfully!');
+                    form.reset();
+                })
+                .catch((error) => {
+                    console.error('EmailJS Error:', error);
+                    alert('Failed to send message. Please try again.');
+                })
+                .finally(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                });
         });
     }
 
@@ -138,4 +156,22 @@ I'm always looking for opportunities to collaborate, learn, and contribute to im
 
     // Initialize modals
     setupProjectModals();
+
+    // Scroll to top functionality
+    const scrollTopBtn = document.getElementById("scroll-top-btn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    };
+
+    scrollTopBtn.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 });

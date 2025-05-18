@@ -661,3 +661,38 @@ h1, .logo {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px var(--hover-glow);
 }
+
+/* Scroll to Top Button */
+#scroll-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--accent-color, #00ff00);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#scroll-top-btn:hover {
+    background-color: var(--accent-color-dark, #00cc00);
+    transform: translateY(-3px);
+}
+
+/* Show the button when scrolling down */
+@keyframes scrollButtonFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes scrollButtonFadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
