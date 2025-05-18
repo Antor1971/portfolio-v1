@@ -123,15 +123,17 @@ h2 {
 /* Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 600px));
+    gap: 2rem;
+    justify-content: center;
     padding: 20px;
 }
 
 .project-card {
     background: var(--card-bg);
     width: 100%;
-    min-height: 360px;  /* Fixed minimum height */
+    max-width: 600px;  /* Increased from 400px */
+    max-height: 300px; /* Reduced from 450px */
     padding: 0;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -142,6 +144,8 @@ h2 {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -153,11 +157,10 @@ h2 {
 }
 
 .project-image {
-    width: 100%;
-    height: 180px;  /* Fixed height for images */
+    width: 40%;
+    height: 180px;
     object-fit: cover;
-    border-bottom: 2px solid var(--primary-color);
-    transition: all 0.3s ease;
+    border-radius: 8px;
 }
 
 .project-card:hover .project-image {
@@ -166,13 +169,51 @@ h2 {
 }
 
 .project-content {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.project-content h3 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.4em;
+    color: var(--accent-color);
+}
+
+.project-card-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px 20px;
+}
+
+.project-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+    max-height: 4.5em;
+    margin: 0;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .github-link {
     position: absolute;
-    bottom: 15px;
-    right: 15px; /* Changed from left to right */
+    right: 20px;
+    bottom: 20px;
     color: var(--text-color);
     font-size: 24px;
     transition: all 0.3s ease;
