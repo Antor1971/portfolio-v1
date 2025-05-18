@@ -37,6 +37,7 @@ nav {
     list-style: none;
     justify-content: center;  /* Center the navigation links */
     margin: 0; /* Reset margin */
+    padding-right: 200px; /* Increased padding to shift links more to the left */
 }
 
 .nav-links li {
@@ -378,6 +379,7 @@ footer {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         z-index: 1000;
+        padding-right: 0; /* Reset padding for mobile view */
     }
 
     .nav-links li {
