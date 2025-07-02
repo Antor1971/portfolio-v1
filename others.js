@@ -94,7 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modal && projectCards && closeModal) {
         function showModal(card) {
             const title = card.querySelector('h3').textContent;
-            const description = card.querySelector('p').textContent;
+            // --- Only change this part for poem preview/full logic ---
+            const descElem = card.querySelector('p');
+            let description;
+            if (descElem && descElem.hasAttribute('data-full')) {
+                description = descElem.getAttribute('data-full');
+            } else {
+                description = descElem ? descElem.textContent : '';
+            }
             const image = card.querySelector('.project-image').src;
             const linkIcon = card.querySelector('.github-link i').className;
             const linkHref = card.querySelector('.github-link').href;
@@ -121,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             modal.querySelector('.modal-title').textContent = title;
-            modal.querySelector('.modal-description').textContent = description;
+            modal.querySelector('.modal-description').innerHTML = description;
             modal.querySelector('.modal-image').src = image;
             modal.querySelector('.modal-github-link').href = linkHref;
             
