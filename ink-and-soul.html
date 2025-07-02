@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink & Soul - Antor's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Others</a>
+                <div class="dropdown-content">
+                    <a href="ink-and-soul.html">
+                        <i class="fas fa-pen-fancy"></i>
+                        Ink & Soul
+                    </a>
+                    <a href="lens.html">
+                        <i class="fas fa-camera"></i>
+                        Lens
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="all-projects" class="with-background">
+        <div class="background-overlay"></div>
+        <h2>Ink & Soul</h2>
+        
+        <!-- Short Stories Subsection -->
+        <div class="project-subsection">
+            <h3 class="subsection-title">
+                <i class="fas fa-book"></i>
+                Short Stories
+            </h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>0:00:00</h3>
+                        <div class="project-card-main">
+                            <img src="images/XO9.jpg" alt="0:00:00" class="project-image">
+                            <p>
+About 518 years ago in Planet X09 there lived a boy named Willy. He lived with his parents and sister. They lived in a kingdom named Zorax. Willy was a simple boy with some imaginary dreams. Willy was a homesick boy. He used to play with his sister named Rozai. Willy was her elder brother. At that time people of X09 had developed so much that they were using the technologies that we are using in the current time. Willy's parents used to work in the nearby farm. Willy used to lead a very simple life. But in the kingdom Zorax everything was not going properly. The Zorax kingdom by a selfish ruler named Woose. Before Woose it was ruled by Kore his character was also same as Woose. There were strikes everyday in the kingdom given by the Kore and team. The people were not happy with these. They wanted peace and their rights back. Anyway Willy's life was going good. He started going to school. He had made some friends. He was not homesick anymore. Willy had dreams to become something great in future. Willy had seen the sufferings of the people of Zorax. People were killed everyday by the people of Kore. Kore wanted the kingdom back. But Woose also had a plan to show the people that Kore is a bad guy, Woose is the one who is protecting them. Meanwhile Willy's parents decided to take Willy and Rozai to a picnic. The next day they had started for the picnic. They were going to the picnic by bus. The bus had started. But Willy and his family didn't know that there was a bomb in the bus. It was given by the army of Woose. It was his plan. Willy and Rozai were very happy. It was Willy's first picnic. He was very excited. The bomb's countdown started. After one minute it was going to blast. They didn't know anything about this. 00:00, 00:00:09, 0:00:08,… 00:00:02, 0:00:01. 0:00:00. BOOM!!! Everything was finished. Willy's dreams were finished too. By this incident Woose was very happy. But there remain some questions, what was Willy's fault? What he had done wrong to Woose and Kore?
+
+[Note: This story has been written on the reality of our current political conditions. Around us there are many people like Woose and Kore. They think that we are their puppets. The time has come. Now we all should stand against them.]</p>
+                        </div>
+                    </div>
+                    <a href="#" class="github-link" target="_blank">
+                        <i class="fas fa-book-open"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Poems Subsection -->
+        <div class="project-subsection">
+            <h3 class="subsection-title">
+                <i class="fas fa-feather-alt"></i>
+                Poems
+            </h3>
+            <div class="projects-grid">
+                <!-- Poems content will be added here -->
+            </div>
+        </div>
+
+        <!-- Life Stories Subsection -->
+        <div class="project-subsection">
+            <h3 class="subsection-title">
+                <i class="fas fa-heart"></i>
+                Life Stories
+            </h3>
+            <div class="projects-grid">
+                <!-- Life Stories content will be added here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 M. Aliul Siddique Antor. All rights reserved.</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content writing-modal">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title"></h3>
+            <div class="modal-image-container">
+                <img class="modal-image" src="" alt="Writing Image">
+            </div>
+            <p class="modal-description"></p>
+            <a class="modal-github-link" href="" target="_blank">
+                <i class="fas fa-book-open"></i> View Full Piece
+            </a>
+        </div>
+    </div>
+
+    <button id="scroll-top-btn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="others.js"></script>
+</body>
+</html>

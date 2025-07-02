@@ -17,8 +17,71 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Burger Animation
-        burger.classList.toggle('toggle');
+        // Burger Animation - fixed class name to match CSS
+        burger.classList.toggle('active');
+        
+        // Prevent body scrolling when menu is open
+        if (nav.classList.contains('nav-active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close menu when clicking anywhere outside
+    document.addEventListener('click', (e) => {
+        const isNavOpen = nav.classList.contains('nav-active');
+        
+        if (isNavOpen && !nav.contains(e.target) && !burger.contains(e.target)) {
+            nav.classList.remove('nav-active');
+            burger.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            navLinks.forEach(link => {
+                link.style.animation = '';
+            });
+        }
+    });
+
+    // Dropdown functionality for both desktop and mobile
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownToggle = dropdown?.querySelector('a');
+    
+    if (dropdown && dropdownToggle) {
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Prevent dropdown from closing when clicking inside dropdown content
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+        if (dropdownContent) {
+            dropdownContent.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
+    }
+
+    // Close mobile menu when clicking on dropdown links
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Allow the link to work normally
+            setTimeout(() => {
+                if (window.innerWidth <= 768) {
+                    nav.classList.remove('nav-active');
+                    burger.classList.remove('active'); // Changed from 'toggle' to 'active'
+                }
+                dropdown.classList.remove('active');
+            }, 100);
+        });
     });
 
     // Smooth Scrolling

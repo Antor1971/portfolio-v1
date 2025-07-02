@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens - Antor's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Others</a>
+                <div class="dropdown-content">
+                    <a href="ink-and-soul.html">
+                        <i class="fas fa-pen-fancy"></i>
+                        Ink & Soul
+                    </a>
+                    <a href="lens.html">
+                        <i class="fas fa-camera"></i>
+                        Lens
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="all-projects" class="with-background">
+        <div class="background-overlay"></div>
+        <h2>Through My Lens</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Concrete and Nature</h3>
+                    <div class="project-card-main">
+                        <img src="images/concrete and nature.jpg" alt="Concrete and Nature" class="project-image">
+                        <p>Urban sunset silhouettes modern apartment buildings under a dramatic cloudy sky.</p>
+                    </div>
+                </div>
+                <a href="#" class="github-link" target="_blank">
+                    <i class="fas fa-camera"></i>
+                </a>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Sleeeping Cat</h3>
+                    <div class="project-card-main">
+                        <img src="images/sleeping cat.jpg" alt="A Sleeping Cat" class="project-image">
+                        <p>A calico cat enjoys a peaceful moment grooming itself on a sunny patio.</p>
+                    </div>
+                </div>
+                <a href="#" class="github-link" target="_blank">
+                    <i class="fas fa-camera"></i>
+                </a>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Dawn View from Lake Side</h3>
+                    <div class="project-card-main">
+                        <img src="images/dawn view from lake side.jpg" alt="Dawn View from Lake Side" class="project-image">
+                        <p> Golden hour sun filters through trees, casting warm reflections on the water's surface.</p>
+                    </div>
+                </div>
+                <a href="#" class="github-link" target="_blank">
+                    <i class="fas fa-camera"></i>
+                </a>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Royal Cat</h3>
+                    <div class="project-card-main">
+                        <img src="images/royal cat.jpg" alt="Royal Cat" class="project-image">
+                        <p>A silver tabby cat sits alertly on tiled flooring in front of glass doors.</p>
+                    </div>
+                </div>
+                <a href="#" class="github-link" target="_blank">
+                    <i class="fas fa-camera"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 M. Aliul Siddique Antor. All rights reserved.</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title"></h3>
+            <div class="modal-image-container">
+                <img class="modal-image" src="" alt="Photography Image">
+            </div>
+            <p class="modal-description"></p>
+            <a class="modal-github-link" href="" target="_blank">
+                <i class="fas fa-camera"></i> View Gallery
+            </a>
+        </div>
+    </div>
+
+    <button id="scroll-top-btn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="others.js"></script>
+</body>
+</html>
